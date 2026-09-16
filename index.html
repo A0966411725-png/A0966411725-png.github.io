@@ -81,9 +81,9 @@
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
             <div class="status-badge">
               <span class="pulse-dot"></span>
-              <span id="hero-status-text">🟢 目前開放接案與全端合作</span>
+              <span id="hero-status-text">🟢 歡迎來到我的個人網站</span>
             </div>
-            <div class="status-badge">
+            <div class="status-badge" id="hero-clock-badge" style="cursor: pointer;" title="點擊切換 12H / 24H 時間格式">
               <span>🕒</span>
               <span id="hero-clock-time">Taipei, GMT+8 · --:--:--</span>
             </div>
@@ -91,7 +91,7 @@
 
           <!-- Hero Headline -->
           <h1 class="hero-title">
-            嗨，我是 <span class="gradient-text" id="hero-name">YENKAI</span>
+            <span id="hero-greeting">嗨</span>，我是 <span class="gradient-text" id="hero-name">YENKAI</span>
           </h1>
 
           <!-- Typewriter Dynamic Subtitle -->
@@ -103,7 +103,7 @@
 
           <!-- Bio Description -->
           <p class="hero-description" id="hero-bio">
-            熱愛打造高擴展性分散式架構與極致使用者體驗的現代網頁應用。專注於 React、TypeScript、Node.js 與雲端 AI 應用整合。
+            你好！我是中興大學電機工程學系的陳彥愷。熱愛學習新技術與打造創新的網頁應用。
           </p>
 
           <!-- Action CTA Buttons -->
@@ -132,13 +132,13 @@
         <div class="hero-visual">
           <div class="avatar-card">
             <div class="avatar-wrapper">
-              <img src="assets/images/avatar.jpg" alt="Alex Chen - Full Stack Developer" id="hero-avatar" class="avatar-img">
+              <img src="assets/images/avatar.jpg" alt="陳彥愷 - 電機工程學系" id="hero-avatar" class="avatar-img">
             </div>
             <div class="avatar-floating-badge">
               <div class="badge-icon-box">⚡</div>
               <div>
-                <div class="badge-text-main">Senior Engineer</div>
-                <div class="badge-text-sub">Taipei, Taiwan (GMT+8)</div>
+                <div class="badge-text-main">電機工程學系</div>
+                <div class="badge-text-sub">Taichung, Taiwan (GMT+8)</div>
               </div>
             </div>
           </div>
@@ -374,7 +374,7 @@
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-left">
-        <div class="footer-clock">
+        <div class="footer-clock" id="footer-clock-badge" style="cursor: pointer;" title="點擊切換 12H / 24H 時間格式">
           <span class="footer-clock-dot"></span>
           <span id="footer-clock-time">Taipei, GMT+8 · --:--:--</span>
         </div>

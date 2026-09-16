@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTerminal();
   initContactFormAndCopy();
   initFooterClock();
+  initDynamicGreeting();
 });
 
 /* ==========================================================================
@@ -547,11 +548,25 @@ function initFooterClock() {
   const heroClockElement = document.getElementById('hero-clock-time');
   if (!clockElement && !heroClockElement) return;
 
+  // 讀取 localStorage 設定，預設為 24 小時制
+  let use12Hour = localStorage.getItem('timeFormat') === '12';
+
+  // 綁定點擊事件以切換 12H / 24H
+  const heroBadge = document.getElementById('hero-clock-badge');
+  const footerBadge = document.getElementById('footer-clock-badge');
+  const toggleFormat = () => {
+    use12Hour = !use12Hour;
+    localStorage.setItem('timeFormat', use12Hour ? '12' : '24');
+    updateClock();
+  };
+  if (heroBadge) heroBadge.addEventListener('click', toggleFormat);
+  if (footerBadge) footerBadge.addEventListener('click', toggleFormat);
+
   function updateClock() {
     const now = new Date();
     const options = {
       timeZone: 'Asia/Taipei',
-      hour12: false,
+      hour12: use12Hour,
       hour: '2-digit',
       minute: '2-digit',
       second: '2-digit'
@@ -564,4 +579,21 @@ function initFooterClock() {
 
   updateClock();
   setInterval(updateClock, 1000);
+}
+
+/* ==========================================================================
+   10. 動態時間問候語 (Dynamic Greeting based on Time)
+   ========================================================================== */
+function initDynamicGreeting() {
+  const greetingEl = document.getElementById('hero-greeting');
+  if (!greetingEl) return;
+  
+  const currentHour = new Date().getHours();
+  if (currentHour >= 5 && currentHour < 12) {
+    greetingEl.textContent = '早安';
+  } else if (currentHour >= 12 && currentHour < 18) {
+    greetingEl.textContent = '午安';
+  } else {
+    greetingEl.textContent = '晚安';
+  }
 }

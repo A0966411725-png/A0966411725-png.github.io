@@ -5,20 +5,19 @@
 const PORTFOLIO_DATA = {
   profile: {
     name: "YENKAI",
-    chineseName: "您的中文名字",
-    tagline: "全端工程師 & 雲端架構愛好者",
+    chineseName: "陳彥愷",
+    tagline: "電機工程學系學生",
     typewriterTitles: [
-      "Full-Stack Software Engineer",
-      "Cloud & AI Systems Builder",
-      "Creative Web Developer",
-      "Open Source Contributor"
+      "電機工程學系 (Electrical Engineering)",
+      "Web Developer",
+      "Tech Enthusiast"
     ],
-    availability: "Available for Projects & Full-time Roles",
-    statusText: "🟢 目前開放接案與全端合作",
-    bioShort: "熱愛打造高擴展性分散式架構與極致使用者體驗的現代網頁應用。專注於 React、TypeScript、Node.js 與雲端 AI 應用整合。",
-    bioDetailed: "擁有超過 5 年全端開發與微服務系統建構經驗，曾主導數個百萬級用戶 SaaS 平台的前後端重構與效能優化。擅長在優雅簡約的 UI/UX 設計與堅固耐用的系統底層架構之間取得完美平衡。",
-    location: "Taipei, Taiwan (GMT+8)",
-    email: "alex.chen.dev@example.com",
+    availability: "Available for Projects",
+    statusText: "🟢 歡迎來到我的個人網站",
+    bioShort: "你好！我是中興大學電機工程學系的陳彥愷。熱愛學習新技術與打造創新的網頁應用。",
+    bioDetailed: "目前就讀於中興大學電機工程學系，對軟體開發、網頁設計以及硬體控制皆有濃厚的興趣。期待能將所學應用於實際專案中，創造有價值的系統。",
+    location: "Taichung, Taiwan (GMT+8)",
+    email: "yenkai@example.com",
     avatar: "assets/images/avatar.jpg",
     resumeUrl: "#", // 可替換為您的 PDF 履歷連結
     stats: [
@@ -38,111 +37,42 @@ const PORTFOLIO_DATA = {
 
   skills: [
     {
-      category: "Frontend 前端架構",
-      icon: "layout",
-      description: "以元件化、高效能與無障礙為核心的使用者介面開發",
-      items: [
-        { name: "React / Next.js", level: "Expert", hot: true },
-        { name: "TypeScript", level: "Expert", hot: true },
-        { name: "Vue.js / Nuxt", level: "Advanced" },
-        { name: "Tailwind CSS / Vanilla CSS", level: "Expert" },
-        { name: "Three.js / WebGL", level: "Intermediate", hot: true },
-        { name: "State Management (Zustand / Redux)", level: "Advanced" }
-      ]
-    },
-    {
-      category: "Backend & Cloud 後端與雲端",
-      icon: "server",
-      description: "具備高併發處理能力與容錯設計的微服務系統",
-      items: [
-        { name: "Node.js / Express / NestJS", level: "Expert", hot: true },
-        { name: "Python / FastAPI", level: "Advanced" },
-        { name: "PostgreSQL / Redis / MongoDB", level: "Expert", hot: true },
-        { name: "Docker & Kubernetes", level: "Advanced" },
-        { name: "AWS (Lambda, S3, ECS, CloudFront)", level: "Advanced" },
-        { name: "REST & GraphQL APIs", level: "Expert" }
-      ]
-    },
-    {
-      category: "AI & Innovation 人工智慧應用",
-      icon: "cpu",
-      description: "現代生成式 AI 與大型語言模型工程整合",
-      items: [
-        { name: "LLM API & Prompt Engineering", level: "Advanced", hot: true },
-        { name: "LangChain / LlamaIndex", level: "Intermediate" },
-        { name: "Vector Database (Pinecone, Chroma)", level: "Advanced" },
-        { name: "RAG 檢索增強生成架構", level: "Advanced", hot: true }
-      ]
-    },
-    {
-      category: "DevOps & Tools 工具與工程化",
+      category: "Programming Languages 程式語言",
       icon: "tool",
-      description: "自動化部署管線與敏捷軟體工程流程",
+      description: "熟悉多種程式語言，能夠針對不同需求選擇最合適的工具。",
       items: [
-        { name: "Git / GitHub Actions CI/CD", level: "Expert" },
-        { name: "Linux / Shell Scripting", level: "Advanced" },
-        { name: "Jest / Playwright E2E", level: "Advanced" },
-        { name: "Figma UI/UX Prototyping", level: "Advanced" }
+        { name: "Python", level: "Advanced", hot: true },
+        { name: "C / C++", level: "Advanced", hot: true },
+        { name: "JavaScript / HTML / CSS", level: "Intermediate" }
+      ]
+    },
+    {
+      category: "Professional Domains 專業領域",
+      icon: "cpu",
+      description: "在人工智慧與資料分析等領域有深入的學習與實作經驗。",
+      items: [
+        { name: "Artificial Intelligence (AI)", level: "Advanced", hot: true },
+        { name: "Machine Learning", level: "Intermediate" },
+        { name: "Data Analysis", level: "Intermediate" },
+        { name: "Internet of Things (IoT)", level: "Intermediate" }
       ]
     }
   ],
 
   projects: [
     {
-      id: "ai-workflow-studio",
-      title: "Cognitix // AI Workflow Studio",
-      category: "ai",
-      categoryLabel: "AI & SaaS",
-      shortDesc: "視覺化神經網路管線調度平台，支援即時節點拖曳、模型微調訓練監控與 Token 消耗即時分析。",
-      fullDesc: "Cognitix 是一個專為企業開發團隊打造的視覺化 AI 管線工作流平台。整合 LangChain 與自建分散式 Worker 節點，使用者可藉由直觀的畫布拉取資料前處理、向量嵌入與多模型 (GPT-4, Claude, Llama 3) 串接流程，並提供端對端即時延遲、成本與模型效能儀表板。",
+      id: "5g-antenna-transmission",
+      title: "5G陣列天線傳輸",
+      category: "research",
+      categoryLabel: "Research & Development",
+      shortDesc: "利用改變陣列天線的波束方向，使天線傳輸達到最佳化。",
+      fullDesc: "本專案聚焦於通訊領域中的陣列天線技術。透過演算法計算與模擬，動態調整天線陣列的波束方向（Beamforming），藉此減少訊號干擾並大幅提升天線傳輸的效率與覆蓋範圍，達到最佳化的通訊品質。",
       image: "assets/images/project-ai.jpg",
-      tags: ["Next.js", "TypeScript", "FastAPI", "LangChain", "Redis", "Tailwind"],
-      metrics: ["降低 60% 管線部署時間", "支援每秒 1,200+ 請求", "即時 Token 監控"],
+      tags: ["Python", "C++", "5G Communication", "Beamforming", "Signal Processing"],
+      metrics: ["優化波束成形演算法", "提升傳輸效率", "降低訊號干擾"],
       demoUrl: "https://github.com",
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/A0966411725-png",
       featured: true
-    },
-    {
-      id: "nexus-analytics",
-      title: "Nexus // 高頻金融資產戰情室",
-      category: "fullstack",
-      categoryLabel: "FinTech & Full-Stack",
-      shortDesc: "次毫秒級即時行情串流與加密資產組合管理平台，內建流暢的互動式 K 線圖與損益預測模組。",
-      fullDesc: "Nexus 是一套面向專業投資者與量化交易團隊的現代化資產分析平台。採用 WebSocket 實現零延遲市場行情推送，並運用 Web Workers 處理百萬筆歷史分時資料運算。具備自訂技術指標、多幣種即時清算與自動資產負債報表匯出功能。",
-      image: "assets/images/project-fintech.jpg",
-      tags: ["React", "Go (Golang)", "WebSocket", "PostgreSQL", "ECharts", "Docker"],
-      metrics: ["< 50ms 資料更新延遲", "百萬級資料繪圖 60FPS", "安全雙重認證"],
-      demoUrl: "https://github.com",
-      githubUrl: "https://github.com",
-      featured: true
-    },
-    {
-      id: "aether-cloud-studio",
-      title: "Aether Cloud // 雲端架構視覺化編排器",
-      category: "tools",
-      categoryLabel: "DevOps & Cloud",
-      shortDesc: "架構圖即程式碼 (Diagram-as-Code) 視覺化工具，拉取雲端組件並直接編譯匯出標準 Terraform 與 K8s 清單。",
-      fullDesc: "Aether Cloud 縮短了系統架構師與 DevOps 工程師之間的鴻溝。使用者只需在互動式畫布上繪製微服務架構，系統便會即時校驗網路安全群組規則、計算預估 AWS 月費用，並一鍵自動產生無語法錯誤的 Terraform 腳本與 Kubernetes YAML 部署清單。",
-      image: "assets/images/project-devtools.jpg",
-      tags: ["TypeScript", "React Flow", "Terraform", "Node.js", "AWS SDK", "Jest"],
-      metrics: ["支援 40+ 種 AWS 核心服務", "省去 85% 腳本除錯工時", "GitHub 2.4k Stars"],
-      demoUrl: "https://github.com",
-      githubUrl: "https://github.com",
-      featured: true
-    },
-    {
-      id: "fluid-art-lab",
-      title: "Fluid.Art // 3D 流體動態生成實驗室",
-      category: "creative",
-      categoryLabel: "Creative Coding & 3D",
-      shortDesc: "基於 WebGL 與 GLSL Shader 打造的即時流體動力學模擬畫布，榮獲 Awwwards 每日佳作 (Site of the Day)。",
-      fullDesc: "探索數值演算法與數位美學的極限體驗。Fluid.Art 運用 WebGL 2.0 與自訂物理著色器，在瀏覽器端流暢演算納維-斯托克斯 (Navier-Stokes) 流體方程。支援滑鼠引力互動、自訂光照波長、粒子擴散與 4K 解析度即時錄製匯出功能。",
-      image: "assets/images/project-creative.jpg",
-      tags: ["Three.js", "WebGL", "GLSL Shaders", "Web Audio API", "Vite"],
-      metrics: ["Awwwards Site of the Day", "全端 60FPS 流暢渲染", "跨載具自適應"],
-      demoUrl: "https://github.com",
-      githubUrl: "https://github.com",
-      featured: false
     }
   ],
 
