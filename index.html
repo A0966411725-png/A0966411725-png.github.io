@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="dark" data-accent="cyan">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YENKAI | Senior Full-Stack Engineer & AI Systems Builder</title>
+  <meta name="description" content="資深全端工程師與雲端架構愛好者。專注於打造高效能 React、TypeScript、Node.js 與雲端生成式 AI 現代 Web 應用。">
+  <meta name="keywords" content="全端工程師, 網頁開發, React, TypeScript, Next.js, AI, 作品集, Full-Stack Developer, Portfolio">
+  <meta name="author" content="Alex Chen">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alex Chen | Senior Full-Stack Engineer & Creative Coder">
+  <meta property="og:description" content="探索現代全端架構、雲端 AI 應用與極致使用者體驗作品集。">
+  <meta property="og:image" content="assets/images/project-ai.jpg">
+
+  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Light Mesh Background -->
+  <div class="ambient-glow-container" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#" class="nav-logo" aria-label="Alex Chen Portfolio">
+        <span class="logo-badge">&lt;/&gt;</span>
+        <span>Alex.dev</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="nav-link">關於</a></li>
+          <li><a href="#skills" class="nav-link">技術棧</a></li>
+          <li><a href="#projects" class="nav-link">精選作品</a></li>
+          <li><a href="#experience" class="nav-link">經歷</a></li>
+          <li><a href="#terminal" class="nav-link">終端機</a></li>
+          <li><a href="#contact" class="nav-link">聯絡</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Accent Palette Picker -->
+        <div class="accent-selector" title="更換霓虹強調色">
+          <span class="accent-dot active" data-color="cyan" title="Cyan (科技青)"></span>
+          <span class="accent-dot" data-color="violet" title="Violet (電幻紫)"></span>
+          <span class="accent-dot" data-color="emerald" title="Emerald (極光綠)"></span>
+          <span class="accent-dot" data-color="sunset" title="Sunset (暖陽橘)"></span>
+        </div>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button class="btn-icon" id="theme-toggle-btn" title="切換明暗模式" aria-label="切換外觀主題">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="開啟行動導航選單">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="about">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <!-- Availability & Clock Badge -->
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div class="status-badge">
+              <span class="pulse-dot"></span>
+              <span id="hero-status-text">🟢 目前開放接案與全端合作</span>
+            </div>
+            <div class="status-badge">
+              <span>🕒</span>
+              <span id="hero-clock-time">Taipei, GMT+8 · --:--:--</span>
+            </div>
+          </div>
+
+          <!-- Hero Headline -->
+          <h1 class="hero-title">
+            嗨，我是 <span class="gradient-text" id="hero-name">YENKAI</span>
+          </h1>
+
+          <!-- Typewriter Dynamic Subtitle -->
+          <div class="hero-typewriter-wrapper">
+            <span class="typewriter-prefix">&gt; 專長於 </span>
+            <span id="typewriter-text"></span>
+            <span class="typewriter-cursor"></span>
+          </div>
+
+          <!-- Bio Description -->
+          <p class="hero-description" id="hero-bio">
+            熱愛打造高擴展性分散式架構與極致使用者體驗的現代網頁應用。專注於 React、TypeScript、Node.js 與雲端 AI 應用整合。
+          </p>
+
+          <!-- Action CTA Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="btn-hero-projects">
+              瀏覽精選專案
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="btn-hero-contact">
+              聯絡我
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="btn-hero-cv">
+              下載簡歷
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <!-- Hero Highlights Metrics -->
+          <div class="hero-stats" id="hero-stats-container">
+            <!-- Rendered dynamically by main.js -->
+          </div>
+        </div>
+
+        <!-- Hero Avatar Visual Card -->
+        <div class="hero-visual">
+          <div class="avatar-card">
+            <div class="avatar-wrapper">
+              <img src="assets/images/avatar.jpg" alt="Alex Chen - Full Stack Developer" id="hero-avatar" class="avatar-img">
+            </div>
+            <div class="avatar-floating-badge">
+              <div class="badge-icon-box">⚡</div>
+              <div>
+                <div class="badge-text-main">Senior Engineer</div>
+                <div class="badge-text-sub">Taipei, Taiwan (GMT+8)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">// 01. CAPABILITIES</div>
+          <h2 class="section-title">專業技能 & 技術生態樹</h2>
+          <p class="section-subtitle">融合現代前端工程、高併發後端架構與生成式 AI 工具鏈，為產品賦予無懈可擊的可靠度與體驗。</p>
+        </div>
+
+        <div class="skills-grid" id="skills-container">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">// 02. PORTFOLIO & WORK</div>
+          <h2 class="section-title">精選全端與開源專案</h2>
+          <p class="section-subtitle">每個作品皆從實際業務痛點或前沿技術探索出發，兼具工程嚴謹性與視覺美感。</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">全部專案 (All)</button>
+          <button class="filter-btn" data-filter="ai">AI & SaaS 系統</button>
+          <button class="filter-btn" data-filter="fullstack">FinTech 全端</button>
+          <button class="filter-btn" data-filter="tools">DevOps 開發工具</button>
+          <button class="filter-btn" data-filter="creative">創意程式設計 3D</button>
+        </div>
+
+        <!-- Project Grid Cards -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">// 03. CAREER JOURNEY</div>
+          <h2 class="section-title">職涯經歷與專業里程碑</h2>
+          <p class="section-subtitle">持續在高速成長的技術團隊中創造價值，專注於系統效能突破與敏捷工程文化建構。</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+          <div id="timeline-container">
+            <!-- Rendered dynamically by main.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE MINI TERMINAL -->
+    <section class="terminal-section" id="terminal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">// 04. GEEK PLAYGROUND</div>
+          <h2 class="section-title">極客互動終端機 (Interactive CLI)</h2>
+          <p class="section-subtitle">偏好鍵盤操作？輸入指令即可探索我的經歷、技能與隱藏主題彩蛋。</p>
+        </div>
+
+        <div class="terminal-window">
+          <div class="terminal-topbar">
+            <div class="terminal-controls">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">bash - alex@portfolio: ~ (80x24)</div>
+            <div class="terminal-hint">輸入 'help' 查看指令</div>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-line output accent">
+              歡迎來到 Alex Chen 的互動微終端系統 (v2.4.0-release)
+            </div>
+            <div class="terminal-line output">
+              系統初始化完成。輸入 <span style="color: var(--accent); font-weight: bold;">help</span> 可瀏覽所有可用指令。
+            </div>
+            <div class="terminal-line output">
+              嘗試更換主題：輸入 <span style="color: var(--accent);">theme violet</span> 或 <span style="color: var(--accent);">theme emerald</span> 看看！
+            </div>
+          </div>
+          <div class="terminal-prompt-row">
+            <span class="terminal-prompt">alex@portfolio:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input" placeholder="輸入指令後按 Enter (例如: help, skills, about)..." autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">// 05. GET IN TOUCH</div>
+          <h2 class="section-title">開啟一場合作對話</h2>
+          <p class="section-subtitle">無論是產品全端開發、架構諮詢或全職職缺邀約，都非常歡迎隨時與我聯繫！</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Methods & Socials -->
+          <div class="contact-info-card">
+            <h3>聯絡管道與社交平台</h3>
+            <p class="contact-info-desc">
+              我常駐於台北 (GMT+8)，平常回覆信件與訊息非常迅速。隨時歡迎透過 Email 或各大社群平台交流技術。
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <div class="contact-method-label">電子郵件</div>
+                  <div class="contact-method-val" id="contact-email-text">alex.chen.dev@example.com</div>
+                </div>
+                <button class="contact-copy-btn" id="copy-email-btn" title="複製 Email" aria-label="複製 Email 地址">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <div class="contact-method-label">工作據點</div>
+                  <div class="contact-method-val">Taipei, Taiwan · 開放跨國遠端</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Pills -->
+            <div class="contact-social-links">
+              <a href="https://github.com/A0966411725-png" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                LinkedIn
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                Twitter / X
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-card">
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">您的姓名 / 稱呼 *</label>
+                <input type="text" id="form-name" class="form-input" placeholder="例如：林先生 / Emily Wang" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">電子信箱 Email *</label>
+                <input type="email" id="form-email" class="form-input" placeholder="name@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">訊息內容 *</label>
+                <textarea id="form-message" class="form-textarea" placeholder="請簡要描述您的專案合作需求、預算範圍或職缺內容..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="btn-submit-form" style="width: 100%;">
+                傳送訊息
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="關閉視窗">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-image-box">
+        <img src="" alt="Project Preview" id="modal-img">
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-category-label" id="modal-category">CATEGORY</div>
+        <h3 class="modal-title" id="modal-title">Project Title</h3>
+        <p class="modal-desc" id="modal-desc">Detailed project description goes here...</p>
+
+        <div class="modal-metrics-box">
+          <div class="modal-metrics-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            專案核心技術指標與成效
+          </div>
+          <ul class="modal-metrics-list" id="modal-metrics-list"></ul>
+        </div>
+
+        <div class="modal-tags" id="modal-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;"></div>
+
+        <div class="modal-footer">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="modal-demo-link">
+            造訪即時展示 (Live Demo)
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="modal-github-link">
+            查看 GitHub 原始碼
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-clock">
+          <span class="footer-clock-dot"></span>
+          <span id="footer-clock-time">Taipei, GMT+8 · --:--:--</span>
+        </div>
+        <div class="footer-copyright">
+          © 2026 Alex Chen. All rights reserved. Built with Pure Craftsmanship.
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="#about" style="font-size: 0.85rem; color: var(--accent); font-weight: 600;">回到頂部 ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="回到頁首">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
